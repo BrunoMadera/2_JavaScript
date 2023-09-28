@@ -1,0 +1,31 @@
+<html><script>
+
+function DataTo3Mods(data)
+{
+    console.log(data.toDateString());
+    console.log(data.toLocaleString());
+    console.log(data.toLocaleDateString());   
+}
+
+const data = new Date("feb 18, 1985");
+DataTo3Mods(data)
+
+console.log(data)
+
+console.log("===============")
+
+const milisecDia = 86400000
+
+function DatatoNiver(data1){
+
+    let dataAtual = new Date();
+    let diasQueFaltam = (data1 -dataAtual) / milisecDia
+    return diasQueFaltam
+}
+
+const data1 = new Date ("feb 18, 2024");
+console.log("Faltam "+DatatoNiver(data1)+" dias")
+
+
+
+</script></html>

@@ -1,0 +1,39 @@
+<html>
+<script>
+
+//ICMS
+
+var PrecoCusto = parseInt(prompt("Inserir Preço de Custo do seu produto..."))
+var ICMS = parseInt(prompt("Inserir % ICMS pro seu Estado..."))
+
+var calculoICMS = (PrecoCusto, ICMS) => { return PrecoCusto + (PrecoCusto * (ICMS / 100)) }
+
+alert("Preço com ICMS é BRL" + calculoICMS(PrecoCusto, ICMS));
+
+
+//MULTIPLOS
+
+var Num1 = parseInt(prompt("Inserir Primeiro Número a comparar..."))
+var Num2 = parseInt(prompt("Inserir Segundo Número a comparar..."))
+
+//var teste1 = Num1 %2
+//var teste2 = Num2 %2
+
+//console.log(teste1)
+//console.log(teste2)
+
+var multiplos = (Num1, Num2) => { 
+    
+    if ((Num1 %2 / Num2 %2) == 0) {
+        return " são múltiplos!";
+    }
+    else {
+        return " NÃO são múltiplos!";
+    }
+ 
+}
+
+alert("Números " + Num1 + " e " + Num2 + multiplos(Num1, Num2));
+
+</script>
+</html>

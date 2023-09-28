@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+Segunda Aula JS
+</head>
+<body>
+    <h1>Segunda Aula JS</h1>
+<!--<script src="aula2.js">-->
+
+
+<script>
+
+    var Nome="bruno" // variavel
+    var SobreNome="madera" // tipo texto
+    var AnoAtual = 2023 // tipo numero
+    var IdadeFimAno = 38 // tipo inteiro
+    var Altura = 1.82 // tipo real
+    var jaComeu = false // tipo lógico
+    var jaComeu2 = true
+
+    console.log(Nome)
+    console.log(SobreNome)
+    console.log(AnoAtual)
+    console.log(IdadeFimAno)
+    console.log(Altura)
+    console.log(jaComeu)
+    
+    var NomeCompleto = Nome +" "+SobreNome
+    
+    console.log("Nome Completo:" + NomeCompleto)
+    
+    // var AnoNascimento = AnoAtual - IdadeFimAno
+
+    console.log("BdayYear:"+AnoNascimento)
+
+    console.log(SobreNome+Altura)
+    console.log(jaComeu+Nome+IdadeFimAno) //prioridade string
+    console.log(jaComeu2+AnoAtual) // logico e nuemro = numero, 0 + 2023
+
+
+    var NomeInserido = prompt("Insira seu Nome")
+    var IdadeUser = prompt("Insira sua idade")
+    var AnoNascimento = AnoAtual - IdadeUser
+
+    alert(NomeInserido + ", voce nasceu em" + AnoNascimento)
+
+    var Ano = "1985"
+    console.log(Ano) // escreveu como texto : branco
+    var AnoInt=parseInt(Ano)
+    console.log(AnoInt) // escreveu como numero : roxo
+
+    var Ano = "1986"
+    Ano = parseInt(Ano)
+    console.log(Ano) // escreveu como numero : roxo
+
+
+    var Num1 = parseInt(prompt("insira o numero 1"))
+    var Num2 = parseInt(prompt("insira o numero 2"))
+    var Result = (Num1+Num2)
+    alert("Resultado é: "+ Result)
+
+    
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<html>
+<script>
+// locos FOR
+
+for(let i=0; i< 10; i++){
+
+console.log(i)
+
+}
+
+console.log("fim codigo1")
+
+for(let i=10; i>=0; i--){
+
+console.log(i)
+
+}
+console.log("fim codigo2")
+
+
+
+// tabuadas
+
+let tabuada = (numero) => {
+
+for(let i=1; i <=10; i++) {
+let multiplicacao = numero * i;
+
+console.log(numero + " x " + i + " = "+ multiplicacao);
+}
+
+}
+
+tabuada(5)
+console.log("fim codigo3")
+tabuada(2)
+console.log("fim codigo4")
+
+
+// produtorio
+
+let numero1 = parseInt(prompt("digite o valor inicial..."))
+
+let produtorio = (numero1) => {
+
+    let resultado = 1;
+
+    for (let i=1; i <= numero1; i++) {
+        resultado = resultado * i;
+    }
+    console.log("Produtorio de " + numero1 + " é " + resultado)
+    }
+
+produtorio(numero1)
+
+console.log("fim codigo5")
+
+
+// atividade em sala FOR
+
+let numero2 = parseInt(prompt("Digite seu numero?..."))
+
+if (numero2 <= 10) { 
+
+
+//console.log(numero2)
+
+let menor = (numero2) => {
+
+    for (let i = numero2; i >= 0 ; i--) {
+
+    console.log(i);
+
+    }
+    }
+
+menor(numero2)
+
+}
+ else { alert('Voce digitou um numero maior que 10. Reinicie o programa..')
+    console.log("numero maior que 10 - fim do codigo 6")
+
+}
+
+console.log("fim codigo6")
+
+// atividade em sala WHILE
+
+let digitado = parseInt(prompt("<<Fatorial>> \n Digite seu numero?..."))
+let store = digitado
+
+let fatorial  = (digitado) => {
+    
+    let resultado = 1
+
+    while(digitado >=1){
+
+        resultado = resultado * digitado
+        digitado = digitado - 1
+
+        }
+
+alert("Fatorial de " + store + " é " + resultado)
+
+}
+
+fatorial(digitado)
+
+console.log("fim codigo7")
+
+</script>
+</html>

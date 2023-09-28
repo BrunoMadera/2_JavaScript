@@ -1,0 +1,27 @@
+<html><script>
+
+
+let digitado = parseInt(prompt("<<Fatorial>> \n Digite seu numero?..."))
+let store = digitado
+
+let fatorial  = (digitado) => {
+    
+    let resultado = 1
+
+    while(digitado >=1){
+
+        resultado = resultado * digitado
+        digitado = digitado - 1
+
+        }
+
+alert("Fatorial do número " + store + " é " + resultado+"\nAté a próxima!")
+
+}
+
+fatorial(digitado)
+
+
+
+
+</script></html>

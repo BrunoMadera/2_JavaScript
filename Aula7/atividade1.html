@@ -1,0 +1,45 @@
+<html>
+    <script>
+
+var escolha = parseInt(prompt("Para conversão de C-> F, digite 1 \n Para conversão de F -> C, digite 2 \n Para Sair Digite 0"))
+
+while (escolha != 0) {
+    
+switch (escolha) {
+    case 1:
+    
+    var temp = parseInt(prompt("Digite a temperatura em Celsius..."));
+
+        let F = (temp * 9/5) + 32;
+
+        alert("A temperatura em Fahrenheit é "+ F + " F \n Até a próxima!");
+
+        escolha = 0;
+
+        break;
+
+    case 2:
+    
+    var temp = parseInt(prompt("Digite a temperatura em Fahrenheit..."));
+
+        let C = (temp - 32 ) * (5/9);
+
+        alert (" A temperatura em Fahrenheit é "+ C +" C \n Até a próxima!");
+
+        escolha = 0;
+     
+        break;
+
+    default:
+
+    alert("Escolha inválida! \nSaindo.... :(");
+    escolha = 0;
+
+        break;
+                    }
+                }
+
+
+
+    </script>
+</html>

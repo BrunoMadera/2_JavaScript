@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+    <script>
+
+/*
+
+// Teste de nomes
+var nome = prompt("Digite seu primeiro nome...")
+var sobrenome = prompt("Digite seu sobrenome...")
+console.log(nome)
+console.log(sobrenome)
+
+if (nome =="" || sobrenome =="") 
+{ alert("Precisa preencher os dois campos >:(") }
+else { alert("Seu nome completo é "+nome+" "+sobrenome+"\n Obrigado e até a próxima!")}
+*/
+
+// Teste de Letras
+
+/*
+
+// Exemplo da professora
+
+var letra = prompt("Digite uma letra:"); // Digitou "a"
+        var usuarioDigitouLetra = letra != "" // true
+        var a = letra == "a" || letra == "A"; // true
+        var e = letra == "e" || letra == "E"; // false
+        // ele tem digitar a letra (&& AND), mas a letra pode ser A OU (||) E.
+        if (usuarioDigitouLetra && (a || e)) { // Se o que o usuário digitou for diferente de vazio
+            console.log("É uma vogal!");
+        } else {
+            console.log("É uma consoante ou o usuário não inseriu a letra");
+        }
+
+        var letra = prompt("Digite uma letra:"); // Digitou "a"
+        if ((letra != "") && ((letra == "a" || letra == "A") || (letra == "e" || letra == "E"))) { 
+            console.log("É uma vogal!");
+        } else {
+            console.log("É uma consoante ou o usuário não inseriu a letra");
+        }
+
+        */     
+
+var letra = prompt("Digite uma Vogal...")
+if (letra =="") 
+{ alert("Precisa escrever uma letra >:(") }
+else if (letra == "a" || letra == "e" || letra == "i"|| letra == "o"|| letra == "u" || 
+            letra == "A" || letra == "E" || letra == "I"|| letra == "O"|| letra == "U") 
+{ alert("A letra escolhida é a VOGAL: "+letra+"\n Obrigado e até a próxima!") }
+else { alert("A letra escolhida é uma CONSOANTE :( \n Obrigado e até a próxima!") }  
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,141 @@
+<html><script>
+
+
+const quaseNatal = new Date("December 24, 2021 23:59:59")
+
+console.log(quaseNatal)
+
+
+console.log("=========")
+
+
+const dataNasc = new Date("1985-2-18")
+
+console.log(dataNasc)
+
+
+function calculaSigno(dataNasc)
+{
+
+let signo;
+
+dia = dataNasc.getDate() ; 
+mes = dataNasc.getMonth() + 1; //getMonth retorno padrao JS - Jan = 0, Fev = 1...
+
+console.log(dia)
+console.log(mes)
+
+switch (mes)
+{
+
+    case 1:
+        if(dia<=20){
+            signo = "Capricórnio"
+        } else {
+            signo = "Aquario"
+        }
+        break;
+
+        case 2:
+        if(dia<=19){
+            signo = "Aquario"
+        } else {
+            signo = "Peixes"
+        }
+        break;
+
+        case 3:
+        if(dia<=20){
+            signo = "Peixes"
+        } else {
+            signo = "Aries"
+        }
+        break;
+
+        case 4:
+        if(dia<=20){
+            signo = "Aries"
+        } else {
+            signo = "Touro"
+        }
+        break;
+
+        case 5:
+        if(dia<=20){
+            signo = "Touro"
+        } else {
+            signo = "Gemeos"
+        }
+        break;
+
+        case 6:
+        if(dia<=20){
+            signo = "Gemeos"
+        } else {
+            signo = "Cancer"
+        }
+        break;
+
+        case 7:
+        if(dia<=21){
+            signo = "Cancer"
+        } else {
+            signo = "Leao"
+        }
+        break;
+
+        case 8:
+        if(dia<=22){
+            signo = "Leao"
+        } else {
+            signo = "Virgem"
+        }
+        break;
+
+        case 9:
+        if(dia<=23){
+            signo = "Virgem"
+        } else {
+            signo = "Libra"
+        }
+        break;
+
+        case 10:
+        if(dia<=22){
+            signo = "Libra"
+        } else {
+            signo = "Escorpiao"
+        }
+        break;
+
+        case 11:
+        if(dia<=22){
+            signo = "Escorpiao"
+        } else {
+            signo = "Sagitario"
+        }
+        break;
+
+        case 12:
+        if(dia<=21){
+            signo = "Sagitario"
+        } else {
+            signo = "Aquario"
+        }
+        break;
+
+}
+
+return signo
+
+}
+
+const inicio = new Date(); //antes
+
+console.log("O signo é:" + calculaSigno(dataNasc))
+
+const final = new Date(); //depois
+
+console.log("tempo de processamento:"+  parseFloat(final - inicio) +" ms")
+
+</script></html>

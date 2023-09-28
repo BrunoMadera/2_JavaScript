@@ -1,0 +1,116 @@
+<html><script>
+
+function aleatorio_20a50() // aleatorio entre 20 e 50
+    {
+        const aleatorio = Math.round(Math.random() * 30 + 20)
+        console.log(aleatorio)
+        return aleatorio
+
+    }
+
+
+
+function criaArray() 
+{
+
+    let lista = [];
+
+    var arrayLenght = aleatorio_20a50()
+    console.log("Tamanho da Array:" + arrayLenght)
+
+    for( let index = 0; index<arrayLenght; index++)
+        {
+
+            lista = [aleatorio_20a50()]
+
+        }
+
+    return lista
+
+
+}
+
+
+
+function raizArray(lista)
+{
+
+    let listaR = [];
+     
+
+    for( let index = 0; index < lista.length; index++)
+        {
+
+            listaR.push(Math.sqrt(index))
+
+        }
+
+    return listaR
+
+    
+}
+
+
+
+
+var lista = criaArray()
+
+var listaR = raizArray(lista)
+
+console.log("====Meu======")
+console.log(lista)
+console.log(listaR)
+console.log("====Fim Meu======")
+
+
+
+console.log("====Professor======")
+
+function gerarNumeroAleatorioEntre20e50()
+{
+ const numeroAleatorio = Math.random() ;
+ const intervaloNumero = numeroAleatorio * (50-20) + 20;
+ const numeroArredondado = Math.round(intervaloNumero);
+ return numeroArredondado
+
+}
+
+function gerarArray(quantidade)
+{
+    const numerosAleatorios = [];
+
+    for (let i = 0; i < quantidade; i++){
+        const numeroAleatorio = gerarNumeroAleatorioEntre20e50();
+        numerosAleatorios.push(numeroAleatorio);
+    }
+    return numerosAleatorios
+}
+
+function calcularRaizQuadrada(arraydeNumeros)
+{
+    const arrayComRaizQuadrada = [];
+    for (let i = 0; i < arraydeNumeros.length; i++)
+    {
+        const numero = arraydeNumeros[i];
+        const raizQuadrada = Math.sqrt(numero);
+        arrayComRaizQuadrada.push(raizQuadrada);
+    }
+
+    return arrayComRaizQuadrada
+}
+
+const numerosInformados = 3;
+// const arraydeNumeros = gerarArray(numerosInformados);
+const arraydeNumeros = [9, 24,56];
+const responseArrayCOmRaizQuadrada = calcularRaizQuadrada(arraydeNumeros);
+
+
+console.log(arraydeNumeros);
+console.log(responseArrayCOmRaizQuadrada);
+
+console.log("====FimProfessor======")
+
+
+</script></html>
+
+

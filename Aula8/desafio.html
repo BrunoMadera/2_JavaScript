@@ -1,0 +1,62 @@
+<!DOCTYPE html> <body>
+    Aula8 - Desafios
+</body><script>
+
+//classes de animais
+
+console.log("-----Classes:Animais1------")
+
+class Animal{
+
+    constructor(nome, peso, idade){
+        this.nome = nome.toUpperCase();
+        this.peso = parseInt(peso);
+        this.idade = parseInt(idade);
+     }
+
+idadeCanina(){
+    this.idade = ((this.idade * 7) / (this.peso * 5)) ;
+
+}
+
+}
+
+const cao1 = new Animal("Pug", 10, 12)
+const cao2 = new Animal("Labrador", 25, 6)
+
+console.log("Cão: "+ cao1.nome )
+
+cao1.idadeCanina();
+console.log("Seu cão "+ cao1.nome+", possui na verdade "+cao1.idade+" anos humanos")
+
+cao2.idadeCanina();
+console.log("Seu cão "+ cao2.nome+", possui na verdade "+cao2.idade+" anos humanos")
+
+
+
+console.log("-----Classes: Animais2-----")
+
+class Animal2{
+
+constructor(nome, peso, idade){
+    this.nome = nome.toUpperCase();
+    this.peso = peso +" kg";
+    this.idade = parseInt(idade);
+    
+    this.descricao = function () {
+        for (const propriedade in this) 
+        {console.log(this[propriedade])}  
+    }
+ }
+}
+
+ const cao3 = new Animal2("Doberman", 32, 10)
+ const cao4 = new Animal2("Shitzu", 3, 2)
+
+
+cao3.descricao();
+cao4.descricao();
+
+
+    
+</script></html>

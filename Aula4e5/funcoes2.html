@@ -1,0 +1,65 @@
+<html>
+
+<script>
+
+
+
+/*
+
+function maior (Num1, Num2){
+
+    if(Num1 > Num2){ return resultado = Num1 - Num2}
+    else if (Num1 < Num2){ return resultado = Num2 - Num1}
+    else { return "Numeros são iguais"}
+ 
+}
+
+console.log(maior(200, 100))
+
+
+ function calculadora(primeiroNumero, segundoNumero, operacao) {
+    if (operacao == "+") {
+        return primeiroNumero + segundoNumero;
+    }
+    else if (operacao == "-") {
+        return primeiroNumero - segundoNumero;
+    }
+    else if (operacao == "*") {
+        return primeiroNumero * segundoNumero;
+    }
+    else if (operacao == "/") {
+        return primeiroNumero / segundoNumero;
+    }
+    else {
+        return 0;
+    }
+}
+console.log(calculadora(10, 5, "*")); */
+
+
+
+var calculadora = (PrimNum, Operador, SegNum) => {
+
+    if (Operador == "+") {
+        return PrimNum + SegNum;
+    }
+    else if (Operador == "-") {
+        return PrimNum - SegNum;
+    }
+    else if (Operador == "*") {
+        return PrimNum * SegNum;
+    }
+    else if (Operador == "/") {
+        return PrimNum / SegNum;
+    }
+    else {
+        return 0;
+    }
+
+}
+
+alert("Resultado é " + calculadora(10, "*", 10));
+
+
+</script>
+</html>

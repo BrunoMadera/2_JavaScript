@@ -1,0 +1,190 @@
+<!DOCTYPE html> <body>
+    Aula8 - Objetos
+</body><script>
+
+//definindo objetos
+console.log("-----------")
+let fruta = {
+
+nome: "banana",
+cor: "amarela",
+peso: 25,
+}
+
+console.log(fruta)
+
+console.log(fruta.cor)
+console.log(fruta.peso)
+console.log(fruta.nome)
+
+
+console.log(fruta["cor"])
+console.log(fruta["peso"])
+console.log(fruta["nome"])
+
+//mudando propriedades
+console.log("-----------")
+
+fruta.nome = "caqui"
+fruta.cor = "vermelha"
+fruta.peso = 100
+
+console.log(fruta.nome)
+console.log(fruta.cor)
+console.log(fruta.peso)
+
+fruta.nome = "melancia"
+fruta.cor = "verde"
+fruta.peso = 500
+
+console.log(fruta.nome)
+console.log(fruta.cor)
+console.log(fruta.peso)
+
+fruta.sabor = "doce"
+
+console.log(fruta.sabor)
+console.log(fruta)
+
+
+//declarando como constructor e new
+console.log("-----------")
+
+function frutas(nome, cor, peso, sabor){
+    this.nome = nome;
+    this.cor = cor;
+    this.peso = peso;
+    this.sabor = sabor;
+}
+
+const fruta1 = new frutas ("banana","amarela",25,"doce");
+const fruta2 = new frutas ("carambola","amarela",75,"agridoce");
+const fruta3 = new frutas ("caqui", "vermelha", 100, "azeda");
+
+console.log(fruta1); console.log(fruta2); console.log(fruta3)
+
+//metodos nos objetos
+console.log("-----------")
+
+function pessoas(nome, idade, rua){
+
+    this.nome = nome;
+    this.idade = idade;
+    this.rua = rua
+    this.falar = function () {
+        console.log("Olá, sou " + this.nome)
+    }
+}
+
+
+const pessoa1 = new pessoas("Bruno", 38, " Rua Ali")
+const pessoa2 = new pessoas("Akemi", 40, " Rua Lá")
+
+pessoa1.falar()
+pessoa2.falar()
+
+
+console.log(fruta1.nome.length)
+console.log(fruta1.nome.toLowerCase())
+console.log(fruta1.nome.toUpperCase())
+
+console.log(fruta2.nome.length)
+console.log(fruta2.nome.toLowerCase())
+console.log(fruta2.nome.toUpperCase())
+
+//Operaror IN
+console.log("-----------")
+
+console.log("nome" in pessoa1) //true
+console.log("Bruno" in pessoa1) //false
+
+
+console.log("-----------")
+for (const propriedade in fruta1) {
+
+    console.log(fruta1[propriedade]);
+}
+
+console.log("-----------")
+for (const propriedade in fruta2) {
+
+console.log(fruta2[propriedade]);
+}
+
+console.log("-----------")
+for (const propriedade in fruta3) {
+
+console.log(fruta3[propriedade]);
+}
+
+//classes
+console.log("-----Classes------")
+
+class Produto{
+
+    constructor(nome, preco){
+        this.nome = nome.toUpperCase();
+        this.preco = parseFloat(preco);
+        this.vendido = false;
+     }
+
+somaICMS(){
+    this.preco = this.preco * 1.21;
+
+}
+
+vender(){
+
+    this.vendido = true;
+
+}
+}
+
+const produto1 = new Produto("arroz", "125")
+const produto2 = new Produto("macarrão", "50")
+
+console.log("Produto: "+ produto1.nome + " | Vendido: "+ produto1.vendido)
+
+console.log("Antes do icms:" + produto1.preco)
+produto1.somaICMS();
+console.log("Depois do icms:"+ produto1.preco)
+
+produto1.vender();
+console.log("Vendido: "+ produto1.vendido)
+
+
+console.log("Produto: "+ produto2.nome + " | Vendido: "+ produto2.vendido)
+
+console.log("Antes do icms:" + produto2.preco)
+produto2.somaICMS();
+console.log("Depois do icms:"+ produto2.preco)
+
+produto2.vender();
+
+console.log("Vendido: "+ produto2.vendido)
+
+console.log("-----Classes:Alimentos-----")
+
+class Alimento{
+
+constructor(nome, cor, peso, tipo){
+    this.nome = nome.toUpperCase();
+    this.cor = cor.toUpperCase();
+    this.peso = peso +" gramas";
+    this.tipo = tipo.toUpperCase();
+    
+    this.descricao = function () {
+        for (const propriedade in this) 
+        {console.log(this[propriedade])}  
+    }
+ }
+}
+
+ const alimento1 = new Alimento("Caqui", "Vermelho", 125, "Fruta")
+ const alimento2 = new Alimento("Abobrinha", "Verde", 1000, "Verdura")
+
+alimento1.descricao();
+alimento2.descricao();
+
+
+</script></html>

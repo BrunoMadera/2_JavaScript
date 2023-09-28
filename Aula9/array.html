@@ -1,0 +1,168 @@
+<!DOCTYPE html> <body>
+    Aula9 - Arrays
+</body><script>
+
+console.log("------------")
+
+// mostrando arrays no log
+const numeros = [1,2,3,4,5,6,7]
+console.log("lenght: "+ numeros.length )
+
+
+for( let index = 0; index<7; index++){
+
+    console.log(numeros[index])
+
+}
+
+console.log("------------")
+
+const nomes = ["bruno", "akemi", "laura", "livia","tinho"]
+
+console.log("antes lenght: "+ nomes.length )
+
+nomes.push("francisca") // adiciona no final do array
+nomes.unshift("dorival") // adiciona no inicio do array
+
+
+console.log("depois lenght: "+ nomes.length )
+
+
+for( let index = 0; index<7; index++){
+
+    console.log(numeros[index]+"-"+nomes[index])
+
+}
+
+console.log("------------")
+
+nomes.pop() // remove no final do array
+nomes.shift() // remove no inicio do array
+
+console.log("depois lenght: "+ nomes.length )
+
+for( let index = 0; index<5; index++){
+
+console.log(numeros[index]+"-"+nomes[index])
+
+}
+
+console.log("------------")
+
+nomes.splice(0,0) // remove a partir da posicao antes da virgula, X dados q queira depois da virgula
+
+console.log("depois lenght: "+ nomes.length )
+
+for( let index = 0; index<5; index++){
+
+console.log(nomes[index])
+
+}
+
+console.log("------------")
+
+console.log(nomes.join("|"))
+
+console.log("------------")
+
+const novoArray = nomes.concat(numeros)
+
+console.log(novoArray)
+
+console.log("------------")
+
+console.log("tem bruno?:"+nomes.includes("bruno"))
+console.log("tem akemi?:"+nomes.includes("akemi"))
+console.log("tem joao?:"+nomes.includes("joao"))
+
+console.log("posicao do bruno?:"+nomes.lastIndexOf("bruno"))
+console.log("posicao da akemi?:"+nomes.lastIndexOf("akemi"))
+
+console.log("------------");
+console.log("------------");
+
+const listaNomes = []; // tamanho do array listaNomes = 0;
+    let quantidade = 1;
+
+    //   5 != 5 // false
+    while (listaNomes.length != quantidade) {
+      let entrada = prompt("Inserir nome"); // ana
+      listaNomes.push(entrada.toUpperCase()); // listaNomes = ["CAROL", "ANA"]
+      console.log(listaNomes.length); // 2
+    }
+    console.log(listaNomes);
+
+//Concatenação com um novo array de dois elementos
+const novaLista = listaNomes.concat(["ANA", "EMA"]);
+    console.log(novaLista);
+
+    //Saída com salto de linha após cada item usando join
+    console.log(novaLista.join("\n"));
+
+    
+console.log("------------");
+console.log("------------"); // atividade da aula
+
+const listaCores = [];
+let quantCores = 5;
+
+while (listaCores.length != quantCores) {
+      let entrada = prompt("Inserir cor..");
+      listaCores.push(entrada.toUpperCase());
+    }
+    console.log(listaCores);
+    console.log("Tamanho da Lista: "+listaCores.length);
+
+    console.log("lista digitada pelo user")
+console.log(listaCores)
+
+var excluirCor = prompt("Digite uma cor para apagar...")
+
+var excluirCoraj = excluirCor.toUpperCase()
+
+console.log("cor para exclusao: "+excluirCoraj)
+
+console.log("existe?"+listaCores.includes(excluirCoraj))
+console.log("pos"+listaCores.lastIndexOf(excluirCoraj))
+
+
+listaCores.splice(listaCores.lastIndexOf(excluirCoraj),1) // remove a partir da posicao antes da virgula, X dados q queira depois da virgula
+
+console.log("lista digitada pelo user apos exclusao")
+    console.log(listaCores)
+
+
+    for(let i=0; i < listaCores.length; i++) {
+
+        console.log("Na posição  " + [i] + " , temos a cor "+listaCores[i]);
+
+                            }
+
+                            
+var incluirCor = prompt("Digite uma cor para incluir...")
+
+var incluirCoraj = incluirCor.toUpperCase()
+
+console.log("cor para inclusao: "+incluirCoraj)
+
+console.log("existe?: "+listaCores.includes(incluirCoraj))
+
+var existe = listaCores.includes(incluirCoraj)
+
+if(existe == false){
+
+    listaCores.unshift(incluirCoraj)
+    
+} else {
+    console.log("sem alteração no array")
+}
+
+for(let i=0; i < listaCores.length; i++) {
+
+console.log("Na posição  " + [i] + " , temos a cor "+listaCores[i]);
+
+                    }
+
+console.log("fim do programa...")
+
+</script></html>
