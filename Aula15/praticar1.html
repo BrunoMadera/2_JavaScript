@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='praticar1.css'>
+</head>
+<body>
+    
+
+    <ul>
+        <li>
+            <a class = "produtos">produto1</a>
+        </li>
+        <li>
+            <a class = "produtos">produto2</a>
+        </li>
+        <li>
+            <a class = "produtos">produto3</a>
+        </li>
+        <li>
+            <a class = "produtos">produto4</a>
+        </li>
+        <li>
+            <a class = "produtos">produto5</a>
+        </li>
+    </ul>
+
+
+inner, append e remove
+
+<ul id="pessoas"> </ul>
+
+
+
+    <script>
+    
+    let produtos = document.getElementsByClassName("produtos");
+
+    console.log(produtos);
+    
+    console.log("=============");
+    
+
+let pai = document.getElementById("pessoas");
+
+let pessoas = ["homer", "marge", "bart", "lisa", "maggie"];
+
+for (const pessoa of pessoas){
+    let li = document.createElement("li");
+    li.innerHTML = pessoa; // 
+    //li.innerText = pessoa;
+    pai.append(li)
+}
+
+pai.remove();
+
+
+let pessoasOrdenadasAlfabeticamente = pessoas.sort(); // copia uma copia da lista e ordena alfabeticamente
+
+let listaOrdenada = document.createElement("ol");
+
+for (const pessoa of pessoasOrdenadasAlfabeticamente){
+    let li = document.createElement("li");
+    li.innerHTML = pessoa; // 
+    //li.innerText = pessoa;
+    listaOrdenada.append(li)
+}
+
+document.body.append(listaOrdenada)
+
+
+
+const pessoas1 = [
+{idade: 29, nome:"homer", peso:120},
+{idade: 20, nome:"marge", peso:60},
+{idade: 10, nome:"bart", peso:30},
+{idade: 12, nome:"lisa", peso:20},
+];
+
+for (const pessoa of pessoas1) {
+
+    let div = document.createElement("div");
+    div.innerHTML = "<h3> idade: " + pessoa.idade + "</h3>" + 
+                    "<p> nome: " + pessoa.nome + "</p>" + 
+                    "<p> peso: " + pessoa.peso + "</p> <br>";
+
+    div.classList.add("produtos");
+    document.body.append(div);
+
+}
+
+
+
+
+    </script>
+
+
+
+<br>
+
+
+</body>
+</html>
